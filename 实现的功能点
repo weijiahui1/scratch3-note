@@ -23,5 +23,5 @@ const KEYS_MAP = {
         isDown: down
     });
 }
-this.triggerKeyboardEvent('up arrow', true);
+triggerKeyboardEvent('up arrow', true);
 
