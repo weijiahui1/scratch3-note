@@ -1,0 +1,28 @@
+1.实现截取头图的功能
+// this.renderer是scratch-render的实例
+handleCanvasImg () {
+    const canvasBox = document.getElementById('canvasbox');
+    this.renderer.draw();
+    const imgSrc = canvasBox.toDataURL('image/png');
+    return imgSrc;
+}
+
+
+
+2.模拟键盘上下左右空格
+// vm 是scratch-vm的实例
+const KEYS_MAP = {
+    'space': ' ',
+    'left arrow': 'Left',
+    'up arrow': 'Up',
+    'right arrow': 'Right',
+    'down arrow': 'Down'
+};
+ triggerKeyboardEvent (key, down = true) {
+    // vm是当前舞台运行环境中scratch-vm的实例
+    this.props.vm.postIOData('keyboard', {
+        key: KEYS_MAP[key] || key,
+        isDown: down
+    });
+}
+this.triggerKeyboardEvent('up arrow', true);
