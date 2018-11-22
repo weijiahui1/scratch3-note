@@ -7,8 +7,6 @@ handleCanvasImg () {
     return imgSrc;
 }
 
-
-
 2.模拟键盘上下左右空格
 // vm 是scratch-vm的实例
 const KEYS_MAP = {
@@ -26,3 +24,4 @@ const KEYS_MAP = {
     });
 }
 this.triggerKeyboardEvent('up arrow', true);
+
