@@ -1,4 +1,24 @@
-1.实现截取头图的功能
+1.针对打包生成的lib.min.js过大的解决方法：
+修改webpack的配置文件：1）压缩 2）按需加载
+98行：
+plugins: [
+    new UglifyJsPlugin({
+        include: /\.js$/,
+        uglifyOptions: {
+            output: {
+                comments: false,
+                beautify: false
+            },
+            compress: {
+                warnings: false
+            }
+        }
+    })
+]
+129行：
+chunkFilename: '[name].[hash:4].js'
+
+2..实现截取头图的功能
 // this.renderer是scratch-render的实例
 handleCanvasImg () {
     const canvasBox = document.getElementById('canvasbox');
@@ -7,7 +27,7 @@ handleCanvasImg () {
     return imgSrc;
 }
 
-2.模拟键盘上下左右空格
+3.模拟键盘上下左右空格
 // vm 是scratch-vm的实例
 const KEYS_MAP = {
     'space': ' ',
