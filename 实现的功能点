@@ -45,3 +45,5 @@ const KEYS_MAP = {
 }
 triggerKeyboardEvent('up arrow', true);
 
+舞台的一些设备事件是由scratch-vm控制的，可以在scratch-vm/src/io/keyboard.js中查看
+
