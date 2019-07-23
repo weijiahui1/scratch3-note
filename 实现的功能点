@@ -47,3 +47,12 @@ triggerKeyboardEvent('up arrow', true);
 
 舞台的一些设备事件是由scratch-vm控制的，可以在scratch-vm/src/io/keyboard.js中查看
 
+4.加自定义的blocks
+
+
+5.修改角色库和背景库
+注意点：文件名称必须是md5格式的
+
+
+
+
